@@ -1,9 +1,9 @@
 ### Cash
 
 ### Table of Contents
-- [Use](#Use)
-- [What you need to do](#What-you-to-do)
-- [Curencies](#Curencies)
+- [Use](#use)
+- [What you need to do](#what-you-to-do)
+- [Curencies](#curencies)
 
 ### Use
 
