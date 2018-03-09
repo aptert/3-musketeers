@@ -2,7 +2,7 @@
 
 ### Table of Contents
 - [Use](#use)
-- [What you need to do](#what-you-to-do)
+- [What you need to do](#what-you-need-to-do)
 - [Curencies](#curencies)
 
 ### Use
