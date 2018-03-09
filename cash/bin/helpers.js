@@ -8,6 +8,10 @@ const config = new Conf();
 
 updateNotifier({pkg}).notify();
 
+/**
+ * Saves the currency chosen by the user into the default currencies
+ * @param {*} argv currency given by the user
+ */
 const saveCurrencies = argv => {
   config.set('defaultFrom', argv[1] || config.get('defaultFrom', 'USD'));
   config.set(
@@ -20,11 +24,17 @@ const saveCurrencies = argv => {
   process.exit(1);
 };
 
+/**
+ * Return the current version of cash
+ */
 const version = () => {
   console.log(pkg.version);
   process.exit(1);
 };
 
+/**
+ * Return the instructions
+ */
 const help = () => {
   console.log(`
 Usage:
@@ -56,7 +66,10 @@ Examples:
   `);
   process.exit(1);
 };
-
+/**
+ * Display either the version or the help screen to the user depending on the argument
+ * @param {*} argv is the argument given by the user
+ */
 const helpers = argv => {
   // Version
   if (argv.indexOf('--version') !== - 1 || argv.indexOf('-v') !== - 1) {
