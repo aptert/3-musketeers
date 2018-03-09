@@ -52,7 +52,7 @@ ${chalk.magenta('--version,  -v')}     Display version number
 
  List of currencies: http://akep.us/currencies
 
-Examples:
+Examples: 
 
  $ ${chalk.cyan('node bin/index.js')} ${chalk.green('1')} ${chalk.yellow('usd')}
 
