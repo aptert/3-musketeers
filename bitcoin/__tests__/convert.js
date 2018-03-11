@@ -91,3 +91,16 @@ test('should allow untest aliases', () => {
   expect(() => { convert(4.6, 'μBTC', 'btest') }).toThrow();
   //throw new Error('test not yet defined... write your test here');
 });
+
+
+test('Should throw an error when a unit is pre-defined', () => { 
+  expect(() => {convert.removeUnit('μBTC')}).toThrow();
+});
+
+test('should throw an error when unit has already a factor', () => {
+  expect(() => { convert.addUnit('BTC', 0.100717) }).toThrow();
+});
+
+test('should throw an error when default unit is removed', () => {
+  expect(() => { convert.removeUnit('BTC') }).toThrow()
+});
