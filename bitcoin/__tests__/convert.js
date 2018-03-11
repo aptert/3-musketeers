@@ -41,18 +41,18 @@ test('should convert a Big number', () => {
 
 test('should convert a NaN to a Number', () => {
   expect(typeof(convert(NaN, 'BTC', 'BTC', 'Number'))).toBe("number")
-  //convert(NaN, 'BTC', 'mBTC', 'Number');
+  expect(typeof(convert(NaN, 'BTC', 'mBTC', 'Number'))).toBe("number")
   //throw new Error('test not yet defined... write your test here');
 });
 
 test('should convert a NaN to a String', () => {
   expect(typeof(convert(NaN, 'BTC', 'BTC', 'String'))).toBe("string")
-  //convert(NaN, 'BTC', 'mBTC', 'String');
+  expect(typeof(convert(NaN, 'BTC', 'mBTC', 'String'))).toBe("string")
   //throw new Error('test not yet defined... write your test here');
 });
 
 test('should not convert a NaN to a Big', () => {
-  expect(convert(NaN, 'BTC', 'BTC', 'Big')).not.toBeInstanceOf(Big)
+  expect(() => { convert(NaN, 'BTC', 'BTC', 'Big') }).toThrowError('NaN');
   //throw new Error('test not yet defined... write your test here');
 });
 
